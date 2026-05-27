@@ -2,15 +2,15 @@ spring:
   application:
     name: jchatmind
   datasource:
-    url: jdbc:postgresql://rm-cn-exo4qs5tq00013io.rwlb.rds.aliyuncs.com:5432/jchatmind
-    username: my_user
-    password: Gkcj110127125!
+    url: 
+    username:
+    password: 
     driver-class-name: org.postgresql.Driver
   mail:
     host: smtp.qq.com
     port: 587
-    username: 905604199@qq.com
-    password: mnknlncdejmpbddf
+    username: your email
+    password: 
     default-encoding: UTF-8
     properties:
       mail:
@@ -21,8 +21,8 @@ spring:
             required: true
   ai:
     deepseek:
-      api-key: sk-61344f4189aa4f6da23428069aa08a51
-      base-url: https://api.deepseek.com
+      api-key: 
+      base-url:
       chat:
         options:
           model: deepseek-chat
