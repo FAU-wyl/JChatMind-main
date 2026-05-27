@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: jchatmind
+  datasource:
+    url: jdbc:postgresql://rm-cn-exo4qs5tq00013io.rwlb.rds.aliyuncs.com:5432/jchatmind
+    username: my_user
+    password: Gkcj110127125!
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 905604199@qq.com
+    password: mnknlncdejmpbddf
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  ai:
+    deepseek:
+      api-key: sk-61344f4189aa4f6da23428069aa08a51
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+    zhipuai:
+      api-key: your-api-key
+      base-url: https://open.bigmodel.cn/api/paas
+      chat:
+        options:
+          model: glm-4.6
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: deepseek-r1:1.5b
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:mcp-servers.json
+custom:
+#  $env:OLLAMA_HOST = "127.0.0.1:11435"
+#  ollama serve
+  ollama-secondary:
+    base-url: http://localhost:11435
+    model: qwen3:4b
+
+mybatis:
+  type-aliases-package: com.kama.jchatmind.model.entity
+  mapper-locations: classpath:mapper/*.xml
+  type-handlers-package: com.kama.jchatmind.typehandler
+
+document:
+  storage:
+    base-path: ./data/documents
